@@ -14,10 +14,26 @@
           padding: 3px 6px;
         }
 
-        textarea {
-          display: block;
-          margin-left: auto;
-          margin-right: auto;
+        .textAreaColumn{
+            width:100%;
+        }
+        .textAreaColumn div{
+            float:left;
+            width:25%;
+            padding:10px;
+            box-sizing: border-box;
+        }
+
+        .textAreaColumn div span{
+            display:block;
+            text-align:center;
+        }
+
+        .textAreaColumn div textarea{
+            box-sizing: border-box;
+            width:100%;
+            border:3px solid green;
+            min-height:150px;
         }
 
         input {
@@ -34,7 +50,7 @@
 
     <!-- Instruction -->
     <h1> <span class="highlight">Instructions</span> </h1>
-    <h2>Please read the following story and answer the following:</h2>
+    <h2>Please read the following story and try to remember following things while reading:</h2>
     <ul>
         <li> The name of the character(s) </li>
         <li> A short description of the character(s)</li>
@@ -77,14 +93,25 @@
 
               I'm tired of crying. Maybe I should laugh.</pre>
               <br/>
-              <h2>Put your responses down below</h2>
+              <h2><span class="highlight">Responses:</span></h2>
+              <li>Enter the name of the character(s) on the left box.</li>
+              <li>Please put the description of the character(s) on the right box.</li>
+              <h2><span class="highlight">Hints:</span></h2>
               <li>First sentence list out the names of characters then describe them</li>
               <li>The character(s) may not be human</li>
+              <li>Names area need to enter at least 1 word</li>
+              <li>Descriptions area need to enter at least 10 words</li>
               <br/>
+
               <form>
-                <div>
+                <div class="textAreaColumn">
                     <div>
-                      <textarea rows="25" cols="200" font-size: 18px></textarea>
+                        <span>Names:</span>
+                        <textarea minlength = 1 placeholder="Hints: Bob..."></textarea>
+                    </div>
+                    <div>
+                        <span>Descriptions:</span>
+                        <textarea minlength = 10 placeholder="Hints: Bob is a good person..."></textarea>
                     </div>
                 </div>
               </br>
